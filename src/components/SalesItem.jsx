@@ -24,19 +24,19 @@ import {
 
 const stocks = [
   {
-    name: "Off Running AG",
+    name: "Running AG",
     value: 10456,
     performance: "6.1%",
     deltaType: "increase",
   },
   {
-    name: "Not Normal Inc.",
+    name: "Normal Inc.",
     value: 5789,
     performance: "1.2%",
     deltaType: "moderateDecrease",
   },
   {
-    name: "Logibling Inc.",
+    name: "Loling Inc.",
     value: 4367,
     performance: "2.3%",
     deltaType: "moderateIncrease",
@@ -48,7 +48,7 @@ const stocks = [
     deltaType: "moderateDecrease",
   },
   {
-    name: "Mwatch Group",
+    name: "Match Group",
     value: 1432,
     performance: "3.4%",
     deltaType: "decrease",
@@ -105,7 +105,10 @@ const SalesItem = () => {
                   <Text>
                     $ {Intl.NumberFormat("us").format(stock.value).toString()}
                   </Text>
-                  <BadgeDelta deltaType="moderateDecrease">-2.5%</BadgeDelta>
+                  <BadgeDelta
+                    size="xs"
+                    deltaType="moderateIncrease"
+                  ></BadgeDelta>
                 </Flex>
               </ListItem>
             ))}
